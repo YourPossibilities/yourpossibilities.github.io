@@ -1,0 +1,18 @@
+{
+  "name": "Your Possibilities",
+  "practitioner": "Robin Rooth-Fogel, LCSW",
+  "tagline": "Imagine the Possibilities",
+  "credential": "Licensed Clinical Social Worker",
+  "phone": "(610) 282-2015",
+  "email": "robin@yourpossibilities.us",
+  "address": {
+    "street": "202 S. Third Street (Rt. 309), Suite 1",
+    "city": "Coopersburg",
+    "state": "PA",
+    "zip": "18036"
+  },
+  "hours": [
+    { "days": "Monday - Thursday", "time": "9:00 AM - 5:00 PM" },
+    { "days": "Friday", "time": "9:00 AM - 1:00 PM" }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "heading": "Services",
+  "intro": "Your Possibilities offers counseling services tailored to the unique needs of each client. All sessions are conducted in a confidential, supportive environment.",
+  "items": [
+    {
+      "title": "Individual Counseling",
+      "description": "One-on-one therapy for adults navigating anxiety, depression, life transitions, grief, and personal growth."
+    },
+    {
+      "title": "Couples Counseling",
+      "description": "Strengthening communication, rebuilding trust, and working through conflict in a guided, structured setting."
+    },
+    {
+      "title": "Family Therapy",
+      "description": "Helping families improve dynamics, resolve conflict, and develop healthier patterns of relating to one another."
+    },
+    {
+      "title": "Specialties",
+      "description": "Client to provide specific therapeutic modalities, populations served, and areas of clinical focus."
+    }
+  ]
+}

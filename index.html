@@ -12,8 +12,8 @@
   :root {
     --plum-deep: #3d2352;
     --plum: #5b3a6b;
-    --plum-light: #7b5a8e;
-    --lavender: #c4a8d4;
+    --plum-light: #a88ebb;
+    --lavender: #dcc8eb;
     --lavender-pale: #ede4f3;
     --cream: #faf7f5;
     --sage: #6b8f5e;
@@ -36,359 +36,175 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* NAV */
   .nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    position: sticky; top: 0; z-index: 100;
     background: var(--white);
     border-bottom: 1px solid var(--lavender-pale);
     padding: 0 2rem;
   }
   .nav-inner {
-    max-width: 960px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 64px;
+    max-width: 960px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between; height: 64px;
   }
   .nav-brand {
-    font-family: var(--serif);
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: var(--plum-deep);
-    letter-spacing: 0.01em;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
+    font-family: var(--serif); font-size: 1.25rem; font-weight: 500;
+    color: var(--plum-deep); cursor: pointer;
+    display: flex; align-items: center; gap: 0.6rem;
   }
-  .nav-brand img {
-    height: 36px;
-    width: auto;
-  }
-  .nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-  }
+  .nav-brand img { height: 36px; width: auto; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
   .nav-links a {
-    text-decoration: none;
-    color: var(--text-light);
-    font-size: 0.875rem;
-    font-weight: 400;
-    letter-spacing: 0.02em;
-    transition: color 0.2s;
-    cursor: pointer;
+    text-decoration: none; color: var(--text-light);
+    font-size: 0.875rem; font-weight: 400; letter-spacing: 0.02em;
+    transition: color 0.2s; cursor: pointer;
   }
-  .nav-links a:hover,
-  .nav-links a.active {
-    color: var(--plum);
-  }
-
+  .nav-links a:hover, .nav-links a.active { color: var(--plum); }
   .hamburger {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    width: 28px;
-    height: 20px;
-    position: relative;
+    display: none; background: none; border: none; cursor: pointer;
+    width: 28px; height: 20px; position: relative;
   }
   .hamburger span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: var(--plum-deep);
-    position: absolute;
-    left: 0;
-    transition: 0.25s;
+    display: block; width: 100%; height: 2px;
+    background: var(--plum-deep); position: absolute; left: 0; transition: 0.25s;
   }
   .hamburger span:nth-child(1) { top: 0; }
   .hamburger span:nth-child(2) { top: 9px; }
   .hamburger span:nth-child(3) { top: 18px; }
 
-  /* HERO */
   .hero {
     background: linear-gradient(135deg, var(--plum-deep) 0%, var(--plum) 50%, var(--plum-light) 100%);
-    padding: 5rem 2rem 4.5rem;
-    text-align: center;
-    color: var(--white);
+    padding: 5rem 2rem 4.5rem; text-align: center; color: var(--white);
   }
-  .hero-tree {
-    margin-bottom: 1.5rem;
-  }
+  .hero-tree { margin-bottom: 1.5rem; }
   .hero-tree img {
-    height: 160px;
-    width: auto;
+    height: 160px; width: auto;
     filter: brightness(1.15) drop-shadow(0 4px 16px rgba(0,0,0,0.2));
   }
   .hero h1 {
-    font-family: var(--serif);
-    font-size: 2.75rem;
-    font-weight: 400;
-    line-height: 1.2;
-    margin-bottom: 0.75rem;
-    letter-spacing: 0.01em;
+    font-family: var(--serif); font-size: 2.75rem; font-weight: 400;
+    line-height: 1.2; margin-bottom: 0.75rem;
   }
   .hero .tagline {
-    font-family: var(--serif);
-    font-size: 1.35rem;
-    font-weight: 400;
-    font-style: italic;
-    color: var(--lavender);
-    margin-bottom: 2rem;
+    font-family: var(--serif); font-size: 1.35rem; font-weight: 400;
+    font-style: italic; color: var(--lavender); margin-bottom: 2rem;
   }
   .hero .credential {
-    font-size: 0.9rem;
-    font-weight: 300;
-    color: var(--lavender);
-    letter-spacing: 0.04em;
-    margin-bottom: 2.5rem;
+    font-size: 0.9rem; font-weight: 300; color: var(--lavender);
+    letter-spacing: 0.04em; margin-bottom: 2.5rem;
   }
-  .hero .cta-row {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+  .hero .cta-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
   .btn {
-    display: inline-block;
-    padding: 0.85rem 2rem;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.2s;
-    border: none;
+    display: inline-block; padding: 0.85rem 2rem; border-radius: 4px;
+    font-size: 0.9rem; font-weight: 500; text-decoration: none;
+    cursor: pointer; transition: all 0.2s; border: none;
   }
-  .btn-primary {
-    background: var(--sage);
-    color: var(--white);
-  }
+  .btn-primary { background: var(--sage); color: var(--white); }
   .btn-primary:hover { background: #5a7d4e; }
   .btn-secondary {
-    background: transparent;
-    color: var(--white);
+    background: transparent; color: var(--white);
     border: 1px solid rgba(255,255,255,0.4);
   }
-  .btn-secondary:hover {
-    border-color: var(--white);
-    background: rgba(255,255,255,0.08);
-  }
+  .btn-secondary:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
 
-  /* SECTIONS */
-  .section {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-  }
+  .section { max-width: 720px; margin: 0 auto; padding: 4rem 2rem; }
   .section h2 {
-    font-family: var(--serif);
-    font-size: 2rem;
-    font-weight: 500;
-    color: var(--plum-deep);
-    margin-bottom: 1.5rem;
-    line-height: 1.25;
+    font-family: var(--serif); font-size: 2rem; font-weight: 500;
+    color: var(--plum-deep); margin-bottom: 1.5rem; line-height: 1.25;
   }
   .section p {
-    margin-bottom: 1.25rem;
-    color: var(--text);
-    font-weight: 300;
-    font-size: 1rem;
-    line-height: 1.75;
+    margin-bottom: 1.25rem; color: var(--text);
+    font-weight: 300; font-size: 1rem; line-height: 1.75;
   }
 
-  /* SERVICES */
-  .services-section {
-    background: var(--white);
-  }
+  .services-section { background: var(--white); }
   .services-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    margin-top: 2rem;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1.5rem; margin-top: 2rem;
   }
   .service-card {
-    background: var(--cream);
-    padding: 2rem 1.5rem;
-    border-left: 3px solid var(--lavender);
-    transition: border-color 0.2s;
+    background: var(--cream); padding: 2rem 1.5rem;
+    border-left: 3px solid var(--lavender); transition: border-color 0.2s;
   }
-  .service-card:hover {
-    border-left-color: var(--plum);
-  }
+  .service-card:hover { border-left-color: var(--plum); }
   .service-card h3 {
-    font-family: var(--serif);
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: var(--plum-deep);
-    margin-bottom: 0.5rem;
+    font-family: var(--serif); font-size: 1.25rem; font-weight: 500;
+    color: var(--plum-deep); margin-bottom: 0.5rem;
   }
   .service-card p {
-    font-size: 0.9rem;
-    color: var(--text-light);
-    font-weight: 300;
-    line-height: 1.6;
-    margin: 0;
+    font-size: 0.9rem; color: var(--text-light); font-weight: 300;
+    line-height: 1.6; margin: 0;
   }
 
-  /* ABOUT */
   .about-section {
     background: var(--cream);
     border-top: 1px solid var(--lavender-pale);
     border-bottom: 1px solid var(--lavender-pale);
   }
-  .about-layout {
-    display: flex;
-    gap: 3rem;
-    align-items: flex-start;
-  }
+  .about-layout { display: flex; gap: 3rem; align-items: flex-start; }
   .about-photo {
-    flex-shrink: 0;
-    width: 200px;
-    border-radius: 4px;
-    object-fit: cover;
-    object-position: top;
-    aspect-ratio: 3/4;
+    flex-shrink: 0; width: 200px; border-radius: 4px;
+    object-fit: cover; object-position: top; aspect-ratio: 3/4;
   }
   .about-text { flex: 1; }
 
-  /* CONTACT */
-  .contact-section {
-    background: var(--white);
-  }
+  .contact-section { background: var(--white); }
   .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
-    margin-top: 2rem;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 2.5rem; margin-top: 2rem;
   }
   .contact-info-block h3 {
-    font-family: var(--serif);
-    font-size: 1.15rem;
-    font-weight: 500;
-    color: var(--plum-deep);
-    margin-bottom: 0.75rem;
+    font-family: var(--serif); font-size: 1.15rem; font-weight: 500;
+    color: var(--plum-deep); margin-bottom: 0.75rem;
   }
   .contact-detail {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    margin-bottom: 1rem;
-    font-size: 0.95rem;
-    color: var(--text);
-    font-weight: 300;
+    display: flex; align-items: flex-start; gap: 0.75rem;
+    margin-bottom: 1rem; font-size: 0.95rem; color: var(--text); font-weight: 300;
   }
-  .contact-detail .icon {
-    font-size: 1.1rem;
-    flex-shrink: 0;
-    margin-top: 0.1rem;
-  }
+  .contact-detail .icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
   .contact-note {
-    background: var(--lavender-pale);
-    padding: 1.25rem 1.5rem;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    color: var(--text-light);
-    font-weight: 400;
-    line-height: 1.65;
-    margin-top: 1.5rem;
+    background: var(--lavender-pale); padding: 1.25rem 1.5rem; border-radius: 4px;
+    font-size: 0.85rem; color: var(--text-light); font-weight: 400;
+    line-height: 1.65; margin-top: 1.5rem;
   }
 
-  /* FOOTER */
   .footer {
-    background: var(--plum-deep);
-    color: var(--lavender);
-    padding: 2.5rem 2rem;
-    text-align: center;
+    background: var(--plum-deep); color: var(--lavender);
+    padding: 2.5rem 2rem; text-align: center;
   }
   .footer-brand {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-bottom: 0.75rem;
+    display: flex; align-items: center; justify-content: center;
+    gap: 0.5rem; margin-bottom: 0.75rem;
   }
-  .footer-brand img {
-    height: 32px;
-    width: auto;
-    filter: brightness(1.3);
-  }
+  .footer-brand img { height: 32px; width: auto; filter: brightness(1.3); }
   .footer-brand span {
-    font-family: var(--serif);
-    font-size: 1.15rem;
-    font-weight: 500;
-    color: var(--white);
+    font-family: var(--serif); font-size: 1.15rem; font-weight: 500; color: var(--white);
   }
-  .footer p {
-    font-size: 0.8rem;
-    font-weight: 300;
-    margin-bottom: 0.25rem;
-  }
+  .footer p { font-size: 0.8rem; font-weight: 300; margin-bottom: 0.25rem; }
   .footer .disclaimer {
-    margin-top: 1.5rem;
-    font-size: 0.75rem;
-    color: var(--plum-light);
-    max-width: 560px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.6;
+    margin-top: 1.5rem; font-size: 0.75rem; color: var(--plum-light);
+    max-width: 560px; margin-left: auto; margin-right: auto; line-height: 1.6;
   }
 
-  /* DRAFT BANNER */
   .page-indicator {
-    text-align: center;
-    padding: 1rem;
-    background: var(--sage-light);
-    font-size: 0.8rem;
-    color: var(--sage);
-    font-weight: 500;
-    letter-spacing: 0.03em;
+    text-align: center; padding: 1rem; background: var(--sage-light);
+    font-size: 0.8rem; color: var(--sage); font-weight: 500; letter-spacing: 0.03em;
   }
   .page-indicator span {
-    display: inline-block;
-    background: var(--sage);
-    color: var(--white);
-    padding: 0.15rem 0.5rem;
-    border-radius: 3px;
-    font-size: 0.7rem;
-    margin-left: 0.5rem;
+    display: inline-block; background: var(--sage); color: var(--white);
+    padding: 0.15rem 0.5rem; border-radius: 3px; font-size: 0.7rem; margin-left: 0.5rem;
   }
 
-  /* MOBILE NAV */
   .nav-links.open {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 64px;
-    left: 0;
-    right: 0;
-    background: var(--white);
-    padding: 1rem 2rem 1.5rem;
-    border-bottom: 1px solid var(--lavender-pale);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    gap: 0.25rem;
+    display: flex; flex-direction: column; position: absolute;
+    top: 64px; left: 0; right: 0; background: var(--white);
+    padding: 1rem 2rem 1.5rem; border-bottom: 1px solid var(--lavender-pale);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); gap: 0.25rem;
   }
-  .nav-links.open a {
-    padding: 0.6rem 0;
-    font-size: 1rem;
-  }
-  .hamburger.open span:nth-child(1) {
-    top: 9px;
-    transform: rotate(45deg);
-  }
-  .hamburger.open span:nth-child(2) {
-    opacity: 0;
-  }
-  .hamburger.open span:nth-child(3) {
-    top: 9px;
-    transform: rotate(-45deg);
-  }
+  .nav-links.open a { padding: 0.6rem 0; font-size: 1rem; }
+  .hamburger.open span:nth-child(1) { top: 9px; transform: rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { top: 9px; transform: rotate(-45deg); }
 
-  /* MOBILE */
   @media (max-width: 768px) {
     .nav-links { display: none; }
     .hamburger { display: block; }
@@ -465,16 +281,12 @@
         <p>One-on-one therapy for adults navigating anxiety, depression, life transitions, grief, and personal growth.</p>
       </div>
       <div class="service-card">
-        <h3>Couples Counseling</h3>
-        <p>Strengthening communication, rebuilding trust, and working through conflict in a guided, structured setting.</p>
-      </div>
-      <div class="service-card">
         <h3>Family Therapy</h3>
         <p>Helping families improve dynamics, resolve conflict, and develop healthier patterns of relating to one another.</p>
       </div>
       <div class="service-card">
         <h3>Specialties</h3>
-        <p><em>Client to provide specific therapeutic modalities, populations served, and areas of clinical focus.</em></p>
+        <p>Trust-Based Relational Intervention (TBRI) for foster families and adoption situations, supporting children and caregivers through connection-based, evidence-based approaches.</p>
       </div>
     </div>
   </div>
@@ -489,7 +301,7 @@
         <h3>Office</h3>
         <div class="contact-detail">
           <span class="icon">&#x1F4CD;</span>
-          <span>202 S. Third Street (Rt. 309), Suite 1<br>Coopersburg, PA 18036</span>
+          <span>344 S. Third Street (Rt. 309), Suite 2<br>Coopersburg, PA 18036</span>
         </div>
         <div class="contact-detail">
           <span class="icon">&#x1F4DE;</span>
@@ -503,7 +315,7 @@
         <h3 style="margin-top: 1.5rem;">Office Hours</h3>
         <div class="contact-detail">
           <span class="icon">&#x1F550;</span>
-          <span><em>Client to provide days and hours of operation.</em></span>
+          <span>Tuesday 9:00 AM - 4:00 PM<br>Wednesday 9:00 AM - 9:00 PM<br>Thursday 9:00 AM - 3:00 PM</span>
         </div>
 
         <div class="contact-note">
@@ -513,18 +325,14 @@
       <div>
         <div style="display:flex;flex-direction:column;gap:0.75rem;">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3041.5!2d-75.3907!3d40.5117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s!2s202+S+Third+St+Suite+1%2C+Coopersburg%2C+PA+18036!5e0!3m2!1sen!2sus!4v1"
-            width="100%"
-            height="280"
-            style="border:0;border-radius:4px;"
-            allowfullscreen=""
-            loading="lazy"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3041.5!2d-75.3907!3d40.5117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s!2s344+S+Third+St+Suite+2%2C+Coopersburg%2C+PA+18036!5e0!3m2!1sen!2sus!4v1"
+            width="100%" height="280" style="border:0;border-radius:4px;"
+            allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             title="Office location map">
           </iframe>
-          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=202+S+Third+St+Suite+1+Coopersburg+PA+18036"
-             target="_blank"
-             rel="noopener noreferrer"
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=344+S+Third+St+Suite+2+Coopersburg+PA+18036"
+             target="_blank" rel="noopener noreferrer"
              style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.85rem;font-weight:500;color:var(--plum);text-decoration:none;">
             &#x1F697; Get directions
           </a>
@@ -540,7 +348,7 @@
     <span>Your Possibilities</span>
   </div>
   <p>Robin Rooth-Fogel, Licensed Clinical Social Worker, LLC</p>
-  <p>202 S. Third Street (Rt. 309), Suite 1 &#8226; Coopersburg, PA 18036</p>
+  <p>344 S. Third Street (Rt. 309), Suite 2 &#8226; Coopersburg, PA 18036</p>
   <p>(610) 282-2015</p>
   <div class="disclaimer">
     This website is for informational purposes only and does not constitute medical advice, diagnosis, or treatment. The content is not intended to be a substitute for professional clinical judgment. If you are in crisis, please call 988 or go to your nearest emergency department. <em>Client to supply practice-specific privacy policy and any required state disclosures.</em>
